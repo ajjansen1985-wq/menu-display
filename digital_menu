@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Your Coffee Shop Digital Menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Patrick+Hand&family=Reenie+Beanie&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://png.pngtree.com/background/20230918/original/pngtree-cinnamonanise-and-coffee-beans-object-confectionary-grains-photo-picture-image_5136005.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Patrick Hand', cursive;
+            color: #fff;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            height: 100%;
+            width: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+            background: rgba(0,0,0,0.5); /* Darker overlay for better readability */
+        }
+        
+        .column {
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        
+        h1 {
+            font-family: 'Homemade Apple', cursive;
+            font-size: 5.5em;
+            text-align: center;
+            margin: 20px 0 40px;
+            text-shadow: 4px 4px 8px #000;
+            grid-column: 1 / -1; /* Span all columns */
+        }
+        
+        h2 {
+            font-family: 'Reenie Beanie', cursive;
+            font-size: 4em;
+            text-align: center;
+            margin: 30px 0 20px;
+        }
+        
+        .section {
+            background: rgba(0,0,0,0.7);
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            border: 4px dashed #fff;
+        }
+        
+        .drink {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            font-size: 2em; /* Larger for TV */
+        }
+        
+        .drink-name {
+            flex: 1;
+        }
+        
+        .prices {
+            white-space: nowrap;
+            font-size: 1.8em;
+        }
+        
+        .description {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-left: 30px;
+            opacity: 0.9;
+        }
+        
+        .handwritten-note {
+            font-family: 'Reenie Beanie', cursive;
+            font-size: 3em;
+            text-align: center;
+            margin: 40px 0;
+            transform: rotate(-5deg);
+        }
+        
+        /* Force 4 columns on wide screens (TVs), 2 on narrower */
+        @media (max-width: 1024px) {
+            .menu-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            h1 { font-size: 4em; }
+        }
+        
+        @media (min-width: 1920px) {
+            .menu-container { padding: 50px; gap: 50px; }
+            h1 { font-size: 7em; }
+            .drink { font-size: 2.5em; }
+            .prices { font-size: 2.2em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Your Coffee Shop</h1>
+        
+        <!-- Same content as before – Column 1 -->
+        <div class="column">
+            <div class="section">
+                <h2>The Classics</h2>
+                <div class="drink"><span class="drink-name">Americano</span><span class="prices">$2.25 / $3.00 / $3.50</span></div>
+                <div class="drink"><span class="drink-name">Breve</span><span class="prices">$6.25 / $9.00 / $11.50</span></div>
+                <div class="drink"><span class="drink-name">Caramel Brule<br><span class="description">Caramel & French Vanilla, Topped with Whipped Cream & Raw Sugar</span></span><span class="prices">$5.50 / $8.00 / $9.50</span></div>
+                <div class="drink"><span class="drink-name">Caramel Macchiato</span><span class="prices">$5.25 / $7.25 / $9.75</span></div>
+                <div class="drink"><span class="drink-name">Chai Tea Latte</span><span class="prices">$6.25 / $8.50 / $11.75</span></div>
+                <div class="drink"><span class="drink-name">Coffee Americano</span><span class="prices">$4.25 / $6.25 / $7.50</span></div>
+                <div class="drink"><span class="drink-name">Dirty Chai</span><span class="prices">$7.25 / $10.00 / $14.00</span></div>
+                <div class="drink"><span class="drink-name">Latte</span><span class="prices">$4.00 / $5.75 / $7.25</span></div>
+                <div class="drink"><span class="drink-name">Mocha</span><span class="prices">$5.25 / $7.25 / $9.75</span></div>
+                <div class="drink"><span class="drink-name">Premium Drip Coffee</span><span class="prices">$3.00 / $4.00 / $6.00</span></div>
+                <div class="drink"><span class="drink-name">Refresher</span><span class="prices">$3.00 / $4.00 / $6.00</span></div>
+            </div>
+            <div class="section">
+                <h2>Non-Coffee Favorites</h2>
+                <div class="drink"><span class="drink-name">Bull Bomb</span><span class="prices">— / $8.00 / —</span></div>
+                <div class="drink"><span class="drink-name">London Fog</span><span class="prices">— / $4.75 / —</span></div>
+                <div class="drink"><span class="drink-name">Steamer</span><span class="prices">$4.25 / $5.25 / —</span></div>
+                <div class="drink"><span class="drink-name">Tea (Earl Grey, Alpine Berry, Jasmine Petal)</span><span class="prices">— / $3.50 / —</span></div>
+            </div>
+            <div class="section">
+                <h2>Lotus</h2>
+                <div class="drink"><span class="drink-name">Strawberries & Cream</span><span class="prices">$6.00 / $8.00 / $12.00</span></div>
+            </div>
+        </div>
+        
+        <!-- Column 2: Frappes (unchanged) -->
+        <div class="column">
+            <div class="section">
+                <h2>Frappes</h2>
+                <div class="drink"><span class="drink-name">Caramel Brownie Sundae</span><span class="prices">$7.00 / $8.00 / $12.00</span></div>
+                <div class="drink"><span class="drink-name">Caramel Frappe</span><span class="prices">$6.00 / $7.25 / $10.50</span></div>
+                <div class="drink"><span class="drink-name">Cookies N Cream Frappe</span><span class="prices">$6.00 / $7.25 / $10.50</span></div>
+                <div class="drink"><span class="drink-name">MochaFrappe</span><span class="prices">$6.00 / $7.25 / $10.50</span></div>
+                <div class="drink"><span class="drink-name">Toffee Coffee Frappe</span><span class="prices">$6.00 / $7.25 / $10.50</span></div>
+                <div class="drink"><span class="drink-name">Vanilla Bean Frappe</span><span class="prices">$6.00 / $7.25 / $10.50</span></div>
+                <div class="drink"><span class="drink-name">White Dark Chocolate Frappe</span><span class="prices">$6.00 / $7.25 / $10.50</span></div>
+            </div>
+            <div class="handwritten-note">Chill out! ❄️</div>
+        </div>
+        
+        <!-- Column 3 & 4: Signature Drinks (unchanged from previous) -->
+        <div class="column">
+            <div class="section">
+                <h2>Signature Drinks (A-L)</h2>
+                <!-- All A-L items here (same as before) -->
+                <div class="drink"><span class="drink-name">Almond Joy<br><span class="description">Dark Chocolate, Almond & Coconut</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Bailey's Irish Cream<br><span class="description">White Chocolate, Salted Caramel & Irish Cream</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Black & White<br><span class="description">Dark & White Chocolate</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Bluebird<br><span class="description">White Dark Chocolate, Blueberry & Hazelnut</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Bunny Tracks<br><span class="description">Dark Chocolate, Caramel & Peanut Butter</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Campfire Latte<br><span class="description">Dark Chocolate, Almond & Coconut</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Cinnamon Roll<br><span class="description">White Chocolate, French Vanilla & Cinnamon</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Cloud Nine<br><span class="description">French Vanilla & Almond</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Dirty Cowgirl</span><span class="prices">$6.25 / $8.50 / $11.75</span></div>
+                <div class="drink"><span class="drink-name">Dirty Leprechaun</span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Elvis<br><span class="description">Dark Chocolate, Peanut Butter & Banana</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">French Toast<br><span class="description">White Chocolate, Cinnamon & Maple Syrup</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Frosty<br><span class="description">White Chocolate & Peppermint</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Heath<br><span class="description">Dark Chocolate, Toffee Nut & Caramel</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Jingle Bells</span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Lucky Charms</span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="section">
+                <h2>Signature Drinks (M-Z)</h2>
+                <!-- All M-Z items here (same as before) -->
+                <div class="drink"><span class="drink-name">Maple Snowflake<br><span class="description">White Chocolate & Maple Syrup</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Marilyn Monroe</span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Monkey Business</span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Nut N Honey<br><span class="description">Hazelnut & Honey</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Raspberry Truffle<br><span class="description">Dark Chocolate, Raspberry & Salted Caramel</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Reindeer<br><span class="description">Caramel, French Vanilla & Cinnamon</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Rocky Road<br><span class="description">Dark Chocolate, French Vanilla & Hazelnut</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Smore's<br><span class="description">Dark Chocolate, Toasted Marshmallow & Toffee Nut</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Snickers Bar</span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Spring Swirl<br><span class="description">White Chocolate & Lavender</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Sugar Cookie<br><span class="description">White Chocolate, Hazelnut, French Vanilla & Cinnamon</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">The Bad Romance<br><span class="description">White Chocolate, Cherry & Amaretto</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">The Elvis<br><span class="description">Dark Chocolate, Banana & Peanut Butter</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+                <div class="drink"><span class="drink-name">Trail Mix<br><span class="description">Dark Chocolate, Hazelnut & Almond</span></span><span class="prices">$6.00 / $7.00 / $10.00</span></div>
+            </div>
+            <div class="handwritten-note">Tasty and relax! ☕✨</div>
+        </div>
+    </div>
+</body>
+</html>
