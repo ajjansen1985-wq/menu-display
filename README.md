@@ -1,2 +1,2 @@
 # menu-display
-#https://ajjansen1985-wq.github.io/menu-display/digital-menu
+# https://ajjansen1985-wq.github.io/menu-display/digital-menu.html
